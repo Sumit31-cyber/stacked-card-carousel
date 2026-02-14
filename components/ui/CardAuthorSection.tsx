@@ -12,7 +12,7 @@ const IMAGE_SIZE = 45;
 const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
   const { image_url, name } = authorDetail;
   return (
-    <View style={{ flexDirection: "row", gap: 10 }}>
+    <View style={{ flexDirection: "row", gap: 10, marginBottom: 15 }}>
       <View
         style={{
           height: IMAGE_SIZE,

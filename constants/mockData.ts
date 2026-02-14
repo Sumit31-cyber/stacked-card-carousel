@@ -22,7 +22,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Dev Malhotra",
-      image_url: "https://randomuser.me/api/portraits/men/12.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
     },
     hero_image:
       "https://i.pinimg.com/736x/c6/58/16/c65816f4cfd368e61dbc7094b14e70de.jpg",
@@ -38,7 +39,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Kabir Verma",
-      image_url: "https://randomuser.me/api/portraits/men/65.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/b2/a5/c5/b2a5c58cb271445de80688a46464aeba.jpg",
     },
     hero_image:
       //   "https://i.pinimg.com/736x/3d/12/cb/3d12cb70ebdb3337a316ec4a773c30dd.jpg",
@@ -55,7 +57,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-12T09:15:00.000Z",
     author: {
       name: "Aarav Mehta",
-      image_url: "https://randomuser.me/api/portraits/men/32.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3e/f3/50/3ef350dc86cc82a092463e5d795654b5.jpg",
     },
     hero_image:
       //   "https://i.pinimg.com/736x/a9/2d/56/a92d562e9a65a9023c5c75191492a45c.jpg",
@@ -71,7 +74,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Riya Sharma",
-      image_url: "https://randomuser.me/api/portraits/women/44.jpg",
+      image_url:
+        "https://i.pinimg.com/1200x/5f/86/3c/5f863ca5cffb43ffbd8c46becbc8bf34.jpg",
     },
     hero_image:
       "https://i.pinimg.com/1200x/05/fe/2f/05fe2fce0e55073b0e49480b537f2c32.jpg",
@@ -87,7 +91,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Neha Kapoor",
-      image_url: "https://randomuser.me/api/portraits/women/29.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/fb/a4/15/fba41589e38f30daf70f154370a64623.jpg",
     },
     hero_image:
       "https://i.pinimg.com/1200x/0d/a8/03/0da8032cfef70f3177d0a591d3944091.jpg",
@@ -103,7 +108,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Ananya Iyer",
-      image_url: "https://randomuser.me/api/portraits/women/68.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/8c/9e/33/8c9e33d8870517279450b19d66f5203f.jpg",
     },
     hero_image:
       "https://images.unsplash.com/photo-1616329965712-cd10c0d3c599?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -119,7 +125,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Ishaan Rao",
-      image_url: "https://randomuser.me/api/portraits/men/41.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
     },
     hero_image:
       "https://images.unsplash.com/photo-1621177555452-bedbe4c28879?q=80&w=985&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -133,7 +140,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Sanya Patel",
-      image_url: "https://randomuser.me/api/portraits/women/52.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
     },
     hero_image:
       "https://images.unsplash.com/photo-1726594692111-7939325c616d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -148,7 +156,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Rahul Desai",
-      image_url: "https://randomuser.me/api/portraits/men/77.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
     },
     hero_image:
       "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -164,7 +173,8 @@ export const DATA: DataType[] = [
     created_at: "2026-02-07T09:15:00.000Z",
     author: {
       name: "Priya Nair",
-      image_url: "https://randomuser.me/api/portraits/women/36.jpg",
+      image_url:
+        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
     },
     content:
       "Large conferences are losing their edge. While they offer visibility, they rarely create depth. In contrast, niche digital communities foster ongoing conversations, trust, and collaboration. Modern networking is less about exchanging business cards and more about building shared spaces online. The strongest professional relationships in 2026 will likely start in DMs, Slack groups, and focused communities — not hotel ballrooms.",
