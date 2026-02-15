@@ -1,3 +1,5 @@
+import BottomBar from "@/components/BottomBar";
+import Header from "@/components/Header";
 import StackedCarousel from "@/components/StackedCarousel";
 import React from "react";
 import { View } from "react-native";
@@ -12,15 +14,9 @@ const HomeScreen = () => {
         backgroundColor: "#e0e1df",
       }}
     >
-      {/* <View
-        style={{
-          flex: 1,
-          //   height: CARD_HEIGHT + CARD_DISTANCE * 4,
-          //   backgroundColor: "red",
-        }}
-      > */}
+      <Header />
       <StackedCarousel />
-      {/* </View> */}
+      <BottomBar />
     </View>
   );
 };

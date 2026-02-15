@@ -1,9 +1,10 @@
 import MaskedView from "@react-native-masked-view/masked-view";
-import { BlurView } from "expo-blur";
+import { BlurTint, BlurView } from "expo-blur";
 // import { BlurView } from "@react-native-community/blur";
 
 import { LinearGradient } from "expo-linear-gradient";
 import {
+  DimensionValue,
   Platform,
   StyleProp,
   StyleSheet,
@@ -15,10 +16,14 @@ import { easeGradient } from "react-native-easing-gradient";
 
 export default function ProgressiveBlurView({
   height,
+  intensity = 30,
   style,
+  tint = "light",
 }: {
-  height: number;
+  height: DimensionValue;
+  intensity?: number;
   style?: StyleProp<ViewStyle>;
+  tint?: BlurTint;
 }) {
   const { width } = useWindowDimensions();
   // const { theme, colors: themeColor } = useAppTheme();
@@ -74,8 +79,8 @@ export default function ProgressiveBlurView({
                 style={[StyleSheet.absoluteFill]}
               >
                 <BlurView
-                  intensity={10}
-                  tint="dark"
+                  intensity={intensity}
+                  tint={tint}
                   style={[StyleSheet.absoluteFill]}
                 />
               </MaskedView>

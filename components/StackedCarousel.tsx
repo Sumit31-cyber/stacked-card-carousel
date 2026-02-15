@@ -7,7 +7,7 @@ import Animated, {
 } from "react-native-reanimated";
 import CarouselCard, { CARD_WIDTH } from "./ui/CarouselCard";
 
-const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } = Dimensions.get("window");
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 const LIST_PADDING = SCREEN_WIDTH - CARD_WIDTH;
 const StackedCarousel = () => {
@@ -26,6 +26,7 @@ const StackedCarousel = () => {
       contentContainerStyle={{
         width: CARD_WIDTH * DATA.length + LIST_PADDING,
         flexGrow: 0,
+        zIndex: 100,
       }}
     >
       {DATA.map((item, index) => {
