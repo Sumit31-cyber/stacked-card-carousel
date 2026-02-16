@@ -24,8 +24,23 @@ const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
         <Image style={{ flex: 1 }} source={{ uri: image_url }} />
       </View>
       <View style={{ justifyContent: "center" }}>
-        <Text style={{ fontSize: 16 }}>{name}</Text>
-        <Text style={{ fontSize: 14, color: "#bebebe" }}>
+        <Text
+          style={{
+            fontSize: 16,
+            fontFamily: "semibold",
+            bottom: -1,
+          }}
+        >
+          {name}
+        </Text>
+        <Text
+          style={{
+            fontSize: 14,
+            color: "rgba(0,0,0,0.5)",
+            fontFamily: "regular",
+            top: -1,
+          }}
+        >
           {timeAgo(created_at)}
         </Text>
       </View>

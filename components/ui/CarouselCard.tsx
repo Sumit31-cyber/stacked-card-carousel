@@ -222,7 +222,7 @@ const CarouselCard = ({
         <AnimatedPressable
           style={[
             animatedPadding,
-            { padding: 10, height: SCREEN_HEIGHT + 200 },
+            { padding: 10, height: SCREEN_HEIGHT + 250 },
           ]}
           onPress={() => {
             if (!isExpandedState) {
@@ -242,11 +242,15 @@ const CarouselCard = ({
             created_at={item.created_at}
           />
           <Text
+            numberOfLines={2}
             style={{
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: "500",
               marginBottom: 10,
-              width: SCREEN_WIDTH - PADDING * 3,
+              width: SCREEN_WIDTH - PADDING * 4,
+              fontFamily: "bold",
+              lineHeight: 21,
+              //   backgroundColor: "red",
             }}
           >
             {item.title}
@@ -312,8 +316,8 @@ const CarouselCard = ({
                     />
                     <Text
                       style={{
-                        color: "rgba(252,252,252,1)",
-                        fontWeight: "300",
+                        color: "rgba(252,252,252,0.8)",
+                        fontFamily: "regular",
                       }}
                     >
                       Quick Recap
@@ -323,6 +327,7 @@ const CarouselCard = ({
                     style={{
                       color: "white",
                       fontSize: 14,
+                      fontFamily: "regular",
                     }}
                   >
                     {item.short_description}
@@ -349,7 +354,12 @@ const CarouselCard = ({
               ]}
             >
               <Text
-                style={{ fontSize: 16, fontWeight: "400", color: "#070706" }}
+                style={{
+                  fontSize: 16,
+                  fontWeight: "400",
+                  color: "#070706",
+                  fontFamily: "regular",
+                }}
               >
                 {item.content}
               </Text>

@@ -61,7 +61,7 @@ const BackButton = ({ onPress }: { onPress: () => void }) => {
       <Animated.View entering={slideFromRight} exiting={slideOutRight}>
         <Pressable onPress={onPress} style={styles.pressable}>
           <FontAwesome6 name="arrow-left" size={14} color="#070706" />
-          <Text style={{ fontSize: 24, fontWeight: "500", color: "#070706" }}>
+          <Text style={{ fontSize: 24, fontFamily: "bold", color: "#070706" }}>
             Back
           </Text>
         </Pressable>

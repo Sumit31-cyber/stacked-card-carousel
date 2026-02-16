@@ -13,10 +13,10 @@ const Header = () => {
       <Text style={styles.left}>For You</Text>
 
       <View style={[styles.centerContainer, { top: top }]}>
-        <Text style={styles.center}>Follow</Text>
+        <Text style={styles.centerText}>Follow</Text>
       </View>
 
-      <Text style={styles.right}>Discover</Text>
+      <Text style={styles.rightText}>Discover</Text>
     </View>
   );
 };
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   left: {
     fontSize: 22,
-    fontWeight: "700",
+    fontFamily: "medium",
   },
   centerContainer: {
     position: "absolute",
@@ -45,8 +45,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  center: {
+  centerText: {
     alignSelf: "center",
+    fontFamily: "semibold",
+    fontSize: 16,
+    color: "#4a4a47",
   },
-  right: {},
+  rightText: {
+    fontFamily: "semibold",
+    fontSize: 16,
+    color: "#4a4a47",
+  },
 });
