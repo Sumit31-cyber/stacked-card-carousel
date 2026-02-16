@@ -1,6 +1,6 @@
+import { useAppTheme } from "@/hooks/useAppTheme";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { BlurTint, BlurView } from "expo-blur";
-// import { BlurView } from "@react-native-community/blur";
 
 import { LinearGradient } from "expo-linear-gradient";
 import {
@@ -26,16 +26,26 @@ export default function ProgressiveBlurView({
   tint?: BlurTint;
 }) {
   const { width } = useWindowDimensions();
-  // const { theme, colors: themeColor } = useAppTheme();
-  // PARALLAX SCROLL
+  const { theme } = useAppTheme();
 
-  // LINEAR GRADIENT
   const { colors, locations } = easeGradient({
-    colorStops: {
-      0: { color: "rgba(36, 36, 36,0.1)" },
-      0.4: { color: "rgba(36, 36, 36,0.95)" },
-      1: { color: "rgba(36, 36, 36)" },
-    },
+    colorStops: !theme.dark
+      ? {
+          0: { color: "rgba(247, 246, 244, 0.0)" },
+          0.15: { color: "rgba(247, 246, 244, 0.2)" },
+          0.35: { color: "rgba(247, 246, 244, 0.5)" },
+          0.6: { color: "rgba(247, 246, 244, 0.75)" },
+          0.8: { color: "rgba(247, 246, 244, 0.9)" },
+          1: { color: "rgba(247, 246, 244, 1)" },
+        }
+      : {
+          0: { color: "rgba(19, 21, 23, 0.0)" },
+          0.15: { color: "rgba(19, 21, 23, 0.2)" },
+          0.35: { color: "rgba(19, 21, 23, 0.5)" },
+          0.6: { color: "rgba(19, 21, 23, 0.75)" },
+          0.8: { color: "rgba(19, 21, 23, 0.92)" },
+          1: { color: "rgba(19, 21, 23, 1)" },
+        },
   });
   return (
     <>
@@ -48,9 +58,7 @@ export default function ProgressiveBlurView({
                 width: "100%",
                 position: "absolute",
                 zIndex: 1,
-                // transform: [{ scale: -1 }],
                 top: 0,
-                // backgroundColor: "red",
               },
               style,
             ]}

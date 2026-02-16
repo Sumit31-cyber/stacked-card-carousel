@@ -26,7 +26,7 @@ const StackedCarousel = () => {
       contentContainerStyle={{
         width: CARD_WIDTH * DATA.length + LIST_PADDING,
         flexGrow: 0,
-        zIndex: 100,
+        zIndex: 2,
       }}
     >
       {DATA.map((item, index) => {

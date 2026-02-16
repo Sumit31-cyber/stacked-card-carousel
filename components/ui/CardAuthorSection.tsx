@@ -1,4 +1,5 @@
 import { Author } from "@/constants/mockData";
+import { useAppTheme } from "@/hooks/useAppTheme";
 import { timeAgo } from "@/utils/utilityFunctions";
 import { Plus } from "lucide-react-native";
 import React, { FC } from "react";
@@ -11,6 +12,7 @@ interface Props {
 const IMAGE_SIZE = 45;
 const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
   const { image_url, name } = authorDetail;
+  const { colors } = useAppTheme();
   return (
     <View style={{ flexDirection: "row", gap: 10, marginBottom: 15 }}>
       <View
@@ -29,6 +31,7 @@ const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
             fontSize: 16,
             fontFamily: "semibold",
             bottom: -1,
+            color: colors.textColor,
           }}
         >
           {name}
@@ -36,9 +39,9 @@ const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
         <Text
           style={{
             fontSize: 14,
-            color: "rgba(0,0,0,0.5)",
             fontFamily: "regular",
             top: -1,
+            color: colors.secondaryText,
           }}
         >
           {timeAgo(created_at)}
@@ -49,13 +52,13 @@ const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
           height: IMAGE_SIZE,
           aspectRatio: 1,
           borderRadius: 100,
-          backgroundColor: "black",
+          backgroundColor: colors.textColor,
           marginLeft: "auto",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <Plus color={"white"} />
+        <Plus color={colors.backgroundColor} />
       </View>
     </View>
   );

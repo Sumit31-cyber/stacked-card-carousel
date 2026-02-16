@@ -1,3 +1,4 @@
+import { useAppTheme } from "@/hooks/useAppTheme";
 import { FontAwesome6 } from "@expo/vector-icons";
 import React, { useEffect } from "react";
 import { Pressable, StyleSheet, Text } from "react-native";
@@ -40,6 +41,7 @@ const slideOutRight = new Keyframe({
 const BackButton = ({ onPress }: { onPress: () => void }) => {
   const { top } = useSafeAreaInsets();
   const intensity = useSharedValue(100);
+  const { theme, colors } = useAppTheme();
 
   useEffect(() => {
     intensity.value = withDelay(300, withTiming(0, { duration: 100 }));
@@ -55,13 +57,20 @@ const BackButton = ({ onPress }: { onPress: () => void }) => {
           height: top * 2.2,
           paddingTop: top,
           paddingLeft: PADDING,
+          backgroundColor: colors.cardBackground,
         },
       ]}
     >
       <Animated.View entering={slideFromRight} exiting={slideOutRight}>
         <Pressable onPress={onPress} style={styles.pressable}>
-          <FontAwesome6 name="arrow-left" size={14} color="#070706" />
-          <Text style={{ fontSize: 24, fontFamily: "bold", color: "#070706" }}>
+          <FontAwesome6 name="arrow-left" size={14} color={colors.textColor} />
+          <Text
+            style={{
+              fontSize: 24,
+              fontFamily: "bold",
+              color: colors.textColor,
+            }}
+          >
             Back
           </Text>
         </Pressable>
@@ -80,7 +89,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     zIndex: 1,
     paddingBottom: 10,
-    backgroundColor: "rgba(252,252,252,1)",
   },
   pressable: {
     alignItems: "center",

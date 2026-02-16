@@ -1,3 +1,4 @@
+import { useAppTheme } from "@/hooks/useAppTheme";
 import {
   BookOpen,
   CirclePlay,
@@ -8,15 +9,17 @@ import {
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import BlurGradient from "./BlurGradient";
 import { PADDING } from "./ui/CarouselCard";
-import ProgressiveBlurView from "./ui/ProgressiveBlurView";
 
 const ICON_SIZE = 20;
 const BottomBar = () => {
-  const { top, bottom } = useSafeAreaInsets();
+  const { bottom } = useSafeAreaInsets();
+  const { theme, colors } = useAppTheme();
 
   return (
     <View
+      pointerEvents="none"
       style={{
         paddingBottom: bottom,
         flexDirection: "row",
@@ -26,11 +29,21 @@ const BottomBar = () => {
         alignItems: "flex-end",
         position: "absolute",
         bottom: 0,
-        height: bottom + 100,
+        // height: bottom + 80,
+        zIndex: 1,
+        // borderTopWidth: 1,
+        paddingTop: 20,
+        // backgroundColor: "red",
       }}
     >
-      <View style={[StyleSheet.absoluteFill, {}]}>
-        <ProgressiveBlurView height={"100%"} intensity={100} />
+      <View style={[StyleSheet.absoluteFill]}>
+        {/* <BlurView intensity={30} style={StyleSheet.absoluteFill} /> */}
+        <BlurGradient
+          height={"125%"}
+          intensity={100}
+          tint={theme.dark ? "dark" : "light"}
+          style={{ zIndex: -1 }}
+        />
       </View>
       <View style={styles.iconContainer}>
         <CirclePlay color={"white"} size={ICON_SIZE} />

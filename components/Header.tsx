@@ -1,3 +1,4 @@
+import { useAppTheme } from "@/hooks/useAppTheme";
 import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -7,16 +8,21 @@ const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 const Header = () => {
   const { top } = useSafeAreaInsets();
+  const { colors } = useAppTheme();
 
   return (
     <View style={[styles.container, { paddingTop: top, height: top * 1.8 }]}>
-      <Text style={styles.left}>For You</Text>
+      <Text style={[styles.left, { color: colors.textColor }]}>For You</Text>
 
       <View style={[styles.centerContainer, { top: top }]}>
-        <Text style={styles.centerText}>Follow</Text>
+        <Text style={[styles.centerText, { color: colors.secondaryText }]}>
+          Follow
+        </Text>
       </View>
 
-      <Text style={styles.rightText}>Discover</Text>
+      <Text style={[styles.rightText, { color: colors.secondaryText }]}>
+        Discover
+      </Text>
     </View>
   );
 };
@@ -47,13 +53,11 @@ const styles = StyleSheet.create({
   },
   centerText: {
     alignSelf: "center",
-    fontFamily: "semibold",
+    fontFamily: "medium",
     fontSize: 16,
-    color: "#4a4a47",
   },
   rightText: {
-    fontFamily: "semibold",
+    fontFamily: "medium",
     fontSize: 16,
-    color: "#4a4a47",
   },
 });
