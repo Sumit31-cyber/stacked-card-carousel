@@ -10,10 +10,10 @@ export const Colors = {
   },
   dark: {
     ...DarkTheme.colors,
-    backgroundColor: "#131517",
+    backgroundColor: "#121212",
     textColor: "#FFFFFF",
     secondaryText: "#74797c",
-    cardBackground: "#080a0c",
+    cardBackground: "#1C1C1E",
   },
 };
 

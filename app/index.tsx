@@ -3,22 +3,26 @@ import Header from "@/components/Header";
 import StackedCarousel from "@/components/StackedCarousel";
 import { useAppTheme } from "@/hooks/useAppTheme";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
+import Animated from "react-native-reanimated";
 
 const HomeScreen = () => {
   const { colors } = useAppTheme();
 
   return (
-    <View
+    <Animated.View
       style={[
         styles.mainContainer,
-        { backgroundColor: colors.backgroundColor },
+
+        {
+          backgroundColor: colors.backgroundColor,
+        },
       ]}
     >
       <Header />
-      <BottomBar />
+      <BottomBar isExiting={false} />
       <StackedCarousel />
-    </View>
+    </Animated.View>
   );
 };
 
@@ -30,5 +34,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#e0e1df",
+  },
+  animatedContainer: {
+    borderRadius: 20,
+    overflow: "hidden",
   },
 });

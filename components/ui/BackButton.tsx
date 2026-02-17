@@ -14,26 +14,26 @@ import Animated, {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PADDING } from "./CarouselCard";
 
-const slideFromRight = new Keyframe({
+const slideFromLeft = new Keyframe({
   0: {
     opacity: 0,
-    transform: [{ scale: 1.2 }, { translateX: 20 }],
+    transform: [{ translateX: -10 }],
   },
   100: {
     opacity: 1,
-    transform: [{ scale: 1 }, { translateX: 0 }],
+    transform: [{ translateX: 0 }],
     easing: Easing.bezier(0.25, 0.1, 0.25, 1), // Smooth ease-out
   },
 })
-  .duration(500)
+  .duration(300)
   .delay(300);
-const slideOutRight = new Keyframe({
+const slideOutLeft = new Keyframe({
   0: {
-    transform: [{ scale: 1 }, { translateX: 0 }],
+    transform: [{ translateX: 0 }],
     opacity: 1,
   },
   100: {
-    transform: [{ scale: 1.2 }, { translateX: 30 }],
+    transform: [{ translateX: -10 }],
     opacity: 0,
     easing: Easing.bezier(0.25, 0.1, 0.25, 1), // Smooth ease-out
   },
@@ -58,10 +58,11 @@ const BackButton = ({ onPress }: { onPress: () => void }) => {
           paddingTop: top,
           paddingLeft: PADDING,
           backgroundColor: colors.cardBackground,
+          zIndex: 1,
         },
       ]}
     >
-      <Animated.View entering={slideFromRight} exiting={slideOutRight}>
+      <Animated.View entering={slideFromLeft} exiting={slideOutLeft}>
         <Pressable onPress={onPress} style={styles.pressable}>
           <FontAwesome6 name="arrow-left" size={14} color={colors.textColor} />
           <Text
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     width: "100%",
     top: 0,
     justifyContent: "flex-end",
-    zIndex: 1,
+    zIndex: 100,
     paddingBottom: 10,
   },
   pressable: {

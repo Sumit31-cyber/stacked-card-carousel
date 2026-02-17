@@ -1,5 +1,7 @@
 import { DataType } from "@/constants/mockData";
 import { useAppTheme } from "@/hooks/useAppTheme";
+
+import { useCardStore } from "@/store/cardStore";
 import { BlurView } from "expo-blur";
 import React, { useMemo, useRef, useState } from "react";
 import {
@@ -12,10 +14,10 @@ import {
   View,
 } from "react-native";
 import Animated, {
-  Easing,
   Extrapolation,
+  FadeIn,
+  FadeOut,
   interpolate,
-  Keyframe,
   SharedValue,
   useAnimatedProps,
   useAnimatedStyle,
@@ -30,31 +32,6 @@ import CardAuthorSection from "./CardAuthorSection";
 
 export const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } =
   Dimensions.get("window");
-
-const zoomIn = new Keyframe({
-  0: {
-    transform: [{ scale: 1.2 }, { translateY: 30 }],
-    opacity: 0,
-  },
-
-  100: {
-    transform: [{ scale: 1 }, { translateY: 0 }],
-    opacity: 1,
-    easing: Easing.bezier(0.25, 0.1, 0.25, 1),
-  },
-})
-  .duration(600)
-  .delay(300);
-const zoomOut = new Keyframe({
-  0: {
-    transform: [{ scale: 1 }, { translateY: 0 }],
-    opacity: 1,
-  },
-  100: {
-    transform: [{ scale: 1.2 }, { translateY: 30 }],
-    opacity: 0,
-  },
-}).duration(600);
 
 export const CARD_WIDTH = SCREEN_WIDTH * 0.94;
 export const CARD_HEIGHT = (CARD_WIDTH / 3) * 4.6;
@@ -77,8 +54,10 @@ const CarouselCard = ({
   scrollX: SharedValue<number>;
 }) => {
   const { colors } = useAppTheme();
+
   const isOpen = useSharedValue(false);
   const [isExpandedState, setIsExpandedState] = useState(false);
+  const { toggleCardExpandedState } = useCardStore();
   const scrollViewRef = useRef<ScrollView>(null);
 
   const { top, bottom } = useSafeAreaInsets();
@@ -189,6 +168,7 @@ const CarouselCard = ({
     }
     isOpen.value = !isOpen.value;
     setIsExpandedState(!isExpandedState);
+    toggleCardExpandedState();
   };
 
   return (
@@ -199,6 +179,8 @@ const CarouselCard = ({
         {
           zIndex: -index,
           backgroundColor: colors.cardBackground,
+          borderWidth: 1,
+          borderColor: "rgba(255,255,255,0.06)",
         },
       ]}
     >
@@ -255,8 +237,8 @@ const CarouselCard = ({
           </View>
           {isExpandedState && (
             <Animated.View
-              entering={zoomIn}
-              exiting={zoomOut}
+              entering={FadeIn}
+              exiting={FadeOut}
               style={[
                 styles.contentContainer,
                 {

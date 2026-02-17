@@ -1,5 +1,6 @@
 import { useAppTheme } from "@/hooks/useAppTheme";
-import React from "react";
+import { useCardStore } from "@/store/cardStore";
+import React, { useCallback, useEffect, useState } from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PADDING } from "./ui/CarouselCard";
@@ -7,11 +8,38 @@ import { PADDING } from "./ui/CarouselCard";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 const Header = () => {
+  const [zIndex, setZIndex] = useState(1);
   const { top } = useSafeAreaInsets();
   const { colors } = useAppTheme();
+  const { isCardExpanded } = useCardStore();
+
+  // Hack for showing the header behind the back button
+  // TODO: Fix this
+  const changeZIndex = useCallback(() => {
+    if (isCardExpanded) {
+      setZIndex(0);
+    } else {
+      setTimeout(() => {
+        setZIndex(1);
+      }, 300);
+    }
+  }, [isCardExpanded]);
+
+  useEffect(() => {
+    changeZIndex();
+  }, [isCardExpanded, changeZIndex]);
 
   return (
-    <View style={[styles.container, { paddingTop: top, height: top * 1.8 }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          paddingTop: top,
+          height: top * 1.8,
+          zIndex: zIndex,
+        },
+      ]}
+    >
       <Text style={[styles.left, { color: colors.textColor }]}>For You</Text>
 
       <View style={[styles.centerContainer, { top: top }]}>
