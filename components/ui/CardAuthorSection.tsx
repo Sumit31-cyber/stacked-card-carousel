@@ -47,6 +47,7 @@ const CardAuthorSection: FC<Props> = ({ authorDetail, created_at }) => {
           {timeAgo(created_at)}
         </Text>
       </View>
+
       <View
         style={{
           height: IMAGE_SIZE,

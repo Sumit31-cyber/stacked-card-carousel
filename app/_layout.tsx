@@ -20,6 +20,7 @@ export default function RootLayout() {
 
   const [loaded, error] = useFonts({
     regular: require("../assets/fonts/SNProRegular.ttf"),
+    poppinsRegular: require("../assets/fonts/Poppins-Regular.ttf"),
     medium: require("../assets/fonts/SNProMedium.ttf"),
     bold: require("../assets/fonts/SNProBold.ttf"),
     semibold: require("../assets/fonts/SNProSemiBold.ttf"),

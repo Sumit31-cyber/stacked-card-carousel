@@ -63,12 +63,12 @@ const CarouselCard = ({
   const { top, bottom } = useSafeAreaInsets();
   const springConfig = useMemo(
     () => ({
-      damping: 60,
-      stiffness: 300,
+      damping: 32,
+      stiffness: 220,
+      mass: 0.8,
     }),
     [],
   );
-
   const rStyle = useAnimatedStyle(() => {
     const expanded = isOpen.value;
     const activeIndex = scrollX.value / CARD_WIDTH;
@@ -187,6 +187,7 @@ const CarouselCard = ({
       {isExpandedState && <BackButton onPress={expandableStateHandler} />}
       <ScrollView
         ref={scrollViewRef}
+        scrollEnabled={isOpen.value ? true : false}
         style={{ flex: 1, borderRadius: BORDER_RADIUS }}
         showsVerticalScrollIndicator={false}
       >
@@ -247,7 +248,7 @@ const CarouselCard = ({
               ]}
             >
               <Text
-                style={[styles.contentTextStyle, { color: colors.textColor }]}
+                style={[styles.contentTextStyle, { color: colors.lightText }]}
               >
                 {item.content}
               </Text>
@@ -282,10 +283,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: PADDING,
   },
   contentTextStyle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "400",
     color: "#070706",
-    fontFamily: "regular",
+    fontFamily: "poppinsRegular",
   },
   title: {
     fontSize: 20,

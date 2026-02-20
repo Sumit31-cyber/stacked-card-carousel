@@ -23,12 +23,15 @@ export const DATA: DataType[] = [
     author: {
       name: "Dev Malhotra",
       image_url:
-        "https://i.pinimg.com/736x/3b/35/66/3b35668121c0c482408475490a0197fe.jpg",
+        "https://i.pinimg.com/1200x/03/cb/79/03cb796b5478e7b690487d9c21f98e7f.jpg",
     },
     hero_image:
-      "https://i.pinimg.com/1200x/79/8b/95/798b954796c5abfcda5d14712863c61c.jpg",
+      // "https://i.pinimg.com/1200x/79/8b/95/798b954796c5abfcda5d14712863c61c.jpg",
+      // "https://i.pinimg.com/736x/cf/74/1c/cf741c596d7c7a78b420c1bdb9d76d4b.jpg",
+      "https://i.pinimg.com/736x/2c/3d/ec/2c3dec02a37ef4c8de29be8e5e6748b3.jpg",
+    // "https://i.pinimg.com/736x/64/26/33/64263305e9d0a85e3a9f6c5bd17272a2.jpg",
     content:
-      "Flexibility and independence were promised by remote work, and they were fulfilled. However, it also created a fresh rift. Workers are moving more quickly when they keep track of their work, communicate in a proactive manner, and show off their accomplishments. Others who contribute subtly but without indicating it run the danger of being missed. Perception frequently shapes potential in remote teams. Structured transparency, not self-promotion, is the answer. Bias is lessened by async communication, weekly updates, transparent documentation, and quantifiable results. Clarity is key in remote settings.",
+      "Flexibility and independence were promised by remote work, and they were fulfilled. However, it also created a fresh rift. Workers are moving more quickly when they keep track of their work, communicate in a proactive manner, and show off their accomplishments. \n\nOthers who contribute subtly but without indicating it run the danger of being missed. Perception frequently shapes potential in remote teams. Structured transparency, not self-promotion, is the answer. Bias is lessened by async communication, weekly updates, transparent documentation, and quantifiable results. Clarity is key in remote settings.",
   },
 
   {
@@ -40,14 +43,15 @@ export const DATA: DataType[] = [
     author: {
       name: "Kabir Verma",
       image_url:
-        "https://i.pinimg.com/736x/b2/a5/c5/b2a5c58cb271445de80688a46464aeba.jpg",
+        "https://i.pinimg.com/736x/2f/d1/bb/2fd1bb7b5ca02435b88182fa3c2324d0.jpg",
     },
     hero_image:
-      //   "https://i.pinimg.com/736x/3d/12/cb/3d12cb70ebdb3337a316ec4a773c30dd.jpg",
-      //   "https://i.pinimg.com/736x/62/9b/6e/629b6e6d060aa984cbdf48b585a39724.jpg",
-      "https://i.pinimg.com/1200x/07/09/eb/0709eb53da1c0fd7462b9f6a913d8147.jpg",
+      // "https://i.pinimg.com/736x/3d/12/cb/3d12cb70ebdb3337a316ec4a773c30dd.jpg",
+      "https://i.pinimg.com/736x/62/9b/6e/629b6e6d060aa984cbdf48b585a39724.jpg",
+    // "https://i.pinimg.com/1200x/07/09/eb/0709eb53da1c0fd7462b9f6a913d8147.jpg",
+    // "https://i.pinimg.com/1200x/0e/5b/04/0e5b04be5b27e2e75f28fe9efa1b5641.jpg",
     content:
-      "Startup expenses are subtly increasing. Cloud infrastructure expenditures are growing more quickly than anticipated, software subscriptions are piling up, and office rent in big locations is still rising. Investors are requesting profitability sooner, and funding cycles are slowing down. Early-stage founders are put in a risky situation as a result. Discipline, not panic, is the answer. Examine the SaaS stack you use. Substitute variable expenses for fixed ones. Create remote teams in areas with lower costs. Prioritise revenue over vanity metrics. The founders who view capital flow as oxygen rather than optional fuel will be the ones who make it through the affordability constraint.",
+      "Startup expenses are subtly increasing. Cloud infrastructure expenditures are growing more quickly than anticipated, software subscriptions are piling up, and office rent in big locations is still rising. Investors are requesting profitability sooner, and funding cycles are slowing down. \n\nEarly-stage founders are put in a risky situation as a result. Discipline, not panic, is the answer. Examine the SaaS stack you use. Substitute variable expenses for fixed ones. Create remote teams in areas with lower costs. Prioritise revenue over vanity metrics. The founders who view capital flow as oxygen rather than optional fuel will be the ones who make it through the affordability constraint.",
   },
 
   {
@@ -65,7 +69,7 @@ export const DATA: DataType[] = [
       "https://i.pinimg.com/736x/f8/24/7f/f8247f7bffb7269d9e3b2310844b330d.jpg",
 
     content:
-      "Choosing a co-founder is more like choosing a spouse than hiring an employee. You’re committing to long-term stress, risk, and uncertainty together. Most founder breakups don’t happen because of incompetence — they happen because of misaligned expectations. Differences in work ethic, financial discipline, communication style, and long-term ambition slowly compound into conflict. Before signing anything, discuss worst-case scenarios: What happens if revenue stalls? If one person wants to quit? If acquisition offers arrive? Alignment on values and vision is non-negotiable. A great partner multiplies energy. The wrong one drains it daily.",
+      "Choosing a co-founder is more like choosing a spouse than hiring an employee. You’re committing to long-term stress, risk, and uncertainty together. Most founder breakups don’t happen because of incompetence — they happen because of misaligned expectations. Differences in work ethic, financial discipline, communication style, and long-term ambition slowly compound into conflict.\n\nBefore signing anything, discuss worst-case scenarios: What happens if revenue stalls? If one person wants to quit? If acquisition offers arrive? Alignment on values and vision is non-negotiable. A great partner multiplies energy. The wrong one drains it daily.",
   },
   {
     id: 3,
@@ -82,7 +86,7 @@ export const DATA: DataType[] = [
       //   "https://i.pinimg.com/736x/a9/2d/56/a92d562e9a65a9023c5c75191492a45c.jpg",
       "https://i.pinimg.com/736x/a7/55/4d/a7554db43b28f1a4659d0ef10c8c3dc5.jpg",
     content:
-      "The future of tech isn’t reserved for venture-backed founders. In fact, some of the biggest opportunities right now favor small, fast-moving teams. First, AI wrappers that solve specific workflow problems are thriving because they focus on outcomes, not hype. Second, vertical SaaS products targeting niche industries are outperforming generic tools. Third, micro-acquisitions allow builders to buy small revenue-generating projects and scale them. Fourth, creator-led brands are turning audiences into distribution channels. And finally, automation-first businesses are lowering operational costs dramatically. The real edge in 2026 won’t be funding — it will be speed, clarity, and consistency.",
+      "The future of tech isn’t reserved for venture-backed founders. In fact, some of the biggest opportunities right now favor small, fast-moving teams. First, AI wrappers that solve specific workflow problems are thriving because they focus on outcomes, not hype. Second, vertical SaaS products targeting niche industries are outperforming generic tools. \n\nThird, micro-acquisitions allow builders to buy small revenue-generating projects and scale them. Fourth, creator-led brands are turning audiences into distribution channels. And finally, automation-first businesses are lowering operational costs dramatically. The real edge in 2026 won’t be funding — it will be speed, clarity, and consistency.",
   },
   {
     id: 4,

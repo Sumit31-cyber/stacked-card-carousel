@@ -7,6 +7,7 @@ export const Colors = {
     textColor: "#000000",
     secondaryText: "#4a4a47",
     cardBackground: "#FFFFFF",
+    lightText: "#616161",
   },
   dark: {
     ...DarkTheme.colors,
@@ -14,6 +15,7 @@ export const Colors = {
     textColor: "#FFFFFF",
     secondaryText: "#74797c",
     cardBackground: "#1C1C1E",
+    lightText: "#FFFFFF",
   },
 };
 
